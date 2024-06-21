@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="../src/output.css" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="../assets/styles/fonts.css" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
     <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css" />
+    <script src="../assets/scripts/script.js" defer></script>
   </head>
   <body class="font-sans">
     <!-- navbar -->
@@ -138,13 +140,377 @@
         </div>
       </div>
     </div>
-    <div class="container mx-auto h-[765px] text-center">
+    <!-- what makes our e-bikes stand out -->
+    <div
+      class="container mx-auto h-[765px] text-center flex flex-col space-y-16"
+    >
       <!-- info -->
       <div class="w-1/2 mx-auto flex flex-col space-y-4">
         <span class="text-xl font-medium text-[#FFB84F]">Feature</span>
         <p class="text-4xl font-medium">What Makes Our E-Bikes Stand Out</p>
       </div>
       <!-- cards -->
+      <div class="flex flex-row justify-between">
+        <!-- card -->
+        <div
+          class="h-80 w-80 bg-[#19F395] rounded-3xl flex flex-col justify-center bg-no-repeat transition ease-in-out duration-300 shadow-[0px_2px_6px_2px_#00000040] hover:shadow-[0px_2px_25px_6px_#19F39580] relative"
+        >
+          <img
+            class="absolute right-0 top-8"
+            src="../assets/images/3.svg"
+            alt=""
+          />
+          <!-- info -->
+          <div class="absolute left-8 flex w-2/3 flex-col space-y-6 text-left">
+            <div
+              class="h-11 w-14 bg-[#25160066] rounded-lg flex items-center justify-center"
+            >
+              <img src="../assets/images/4.svg" alt="" />
+            </div>
+            <span class="text-3xl font-medium">Battery</span>
+            <p class="text-base font-medium text-[#6C6C6C]">
+              Powerful Battery That Lasts For At Least A Week
+            </p>
+          </div>
+        </div>
+        <!-- card -->
+        <div
+          class="h-80 w-80 bg-[#FFB84F] rounded-3xl flex flex-col justify-center bg-no-repeat transition ease-in-out duration-300 shadow-[0px_2px_6px_2px_#00000040] hover:shadow-[0px_2px_25px_6px_#FFB84F80] relative"
+        >
+          <img
+            class="absolute right-0 top-8"
+            src="../assets/images/3.svg"
+            alt=""
+          />
+          <!-- info -->
+          <div class="absolute left-8 flex w-2/3 flex-col space-y-6 text-left">
+            <div
+              class="h-11 w-14 bg-[#25160066] rounded-lg flex items-center justify-center"
+            >
+              <img src="../assets/images/5.svg" alt="" />
+            </div>
+            <span class="text-3xl font-medium">Fast Charger</span>
+            <p class="text-base font-medium text-[#6C6C6C]">
+              The bike has a fast-charging battery that charges in less than an
+              hour
+            </p>
+          </div>
+        </div>
+        <!-- card -->
+        <div
+          class="h-80 w-80 bg-[#C47DFD] rounded-3xl flex flex-col justify-center bg-no-repeat transition ease-in-out duration-300 shadow-[0px_2px_6px_2px_#00000040] hover:shadow-[0px_2px_25px_6px_#C47DFD] relative"
+        >
+          <img
+            class="absolute right-0 top-8"
+            src="../assets/images/3.svg"
+            alt=""
+          />
+          <!-- info -->
+          <div class="absolute left-8 flex w-2/3 flex-col space-y-6 text-left">
+            <div
+              class="h-11 w-14 bg-[#25160066] rounded-lg flex items-center justify-center"
+            >
+              <img src="../assets/images/6.svg" alt="" />
+            </div>
+            <span class="text-3xl font-medium">motor</span>
+            <p class="text-base font-medium text-[#6C6C6C]">
+              The bike has a powerful motor that makes it go very quickly
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
+    <!-- explore the perfect fit for you -->
+    <div
+      class="container mx-auto h-[775px] text-center flex flex-col space-y-8"
+    >
+      <!-- info -->
+      <div class="w-1/2 mx-auto flex flex-col space-y-4">
+        <span class="text-xl font-medium text-[#FFB84F]">Feature</span>
+        <p class="text-4xl font-medium">explore the prefect fit for you</p>
+      </div>
+      <!-- button group -->
+      <div class="flex items-center justify-center space-x-4">
+        <button
+          data-target="#road-bike"
+          class="btn transition ease-in-out duration-300 btn-active font-bold bg-[#EBAF5633] border-2 border-[#FFB84F] rounded-3xl px-2 py-[2px]"
+        >
+          Road
+        </button>
+        <button
+          data-target="#mountain-bike"
+          class="btn transition ease-in-out duration-300 font-bold bg-[#EBAF5633] border-2 border-[#FFB84F] rounded-3xl px-2 py-[2px]"
+        >
+          Mountain
+        </button>
+        <button
+          data-target="#cargo-bike"
+          class="btn transition ease-in-out duration-300 font-bold bg-[#EBAF5633] border-2 border-[#FFB84F] rounded-3xl px-2 py-[2px]"
+        >
+          Cargo
+        </button>
+        <button
+          data-target="#folding-bike"
+          class="btn transition ease-in-out duration-300 font-bold bg-[#EBAF5633] border-2 border-[#FFB84F] rounded-3xl px-2 py-[2px]"
+        >
+          Folding
+        </button>
+      </div>
+      <!-- bike section -->
+      <div class="container">
+        <!-- Road bike card -->
+        <div
+          id="road-bike"
+          class="w-3/5 h-[465px] bg-[url(../assets/images/0.svg)] relative"
+        >
+          <!-- parts description buttons -->
+          <!-- wheel -->
+          <div class="flex flex-row-reverse relative z-10">
+            <div id="wheel-btn-toggle" class="hidden">
+              <div
+                class="h-24 w-40 flex flex-col items-center justify-center z-20 absolute top-[380px] right-[-190px] shadow-[0px_2px_13px_3px_rgba(255,_184,_79,_0.5)] bg-[#FFB84F] rounded-lg"
+              >
+                <div class="">
+                  <img src="../assets/images/8.svg" alt="" />
+                </div>
+                <span class="font-bold">Wheel</span>
+              </div>
+              <div class="absolute top-[308px] right-[-132px]">
+                <img src="../assets/images/line1.svg" alt="" />
+              </div>
+            </div>
+
+            <button
+              data-target="#wheel-btn-toggle"
+              class="parts-tglr h-6 w-6 absolute top-[300px] right-[140px] border-[5px] border-[#FFB84F] bg-[#945900] rounded-full"
+            ></button>
+          </div>
+          <!-- saddle -->
+          <div class="flex flex-row-reverse relative z-10">
+            <div id="saddle-btn-toggle" class="hidden">
+              <div
+                class="h-24 w-40 flex flex-col items-center justify-center z-20 absolute top-[0px] left-[190px] shadow-[0px_2px_13px_3px_rgba(255,_184,_79,_0.5)] bg-[#FFB84F] rounded-lg"
+              >
+                <div class="">
+                  <img src="../assets/images/8.svg" alt="" />
+                </div>
+                <span class="font-bold">Saddle</span>
+              </div>
+              <div class="absolute top-[61px] left-[268px]">
+                <img src="../assets/images/line5.svg" alt="" />
+              </div>
+            </div>
+
+            <button
+              data-target="#saddle-btn-toggle"
+              class="parts-tglr h-6 w-6 absolute top-[150px] left-[260px] border-[5px] border-[#FFB84F] bg-[#945900] rounded-full"
+            ></button>
+          </div>
+          <!-- head tube -->
+          <div class="flex flex-row-reverse relative z-10">
+            <div id="headtube-btn-toggle" class="hidden">
+              <div
+                class="h-24 w-40 flex flex-col items-center justify-center z-20 absolute top-[70px] right-[0px] shadow-[0px_2px_13px_3px_rgba(255,_184,_79,_0.5)] bg-[#FFB84F] rounded-lg"
+              >
+                <div class="">
+                  <img src="../assets/images/8.svg" alt="" />
+                </div>
+                <span class="font-bold">Head Tube</span>
+              </div>
+              <div class="absolute top-[108px] right-[100px]">
+                <img src="../assets/images/line4.svg" alt="" />
+              </div>
+            </div>
+
+            <button
+              data-target="#headtube-btn-toggle"
+              class="parts-tglr h-6 w-6 absolute top-[100px] left-[470px] border-[5px] border-[#FFB84F] bg-[#945900] rounded-full"
+            ></button>
+          </div>
+          <!-- front derailleur -->
+          <div class="flex flex-row-reverse relative z-10">
+            <div id="frontderlr-btn-toggle" class="hidden">
+              <div
+                class="h-24 w-40 flex flex-col items-center justify-center z-20 absolute top-[400px] left-[-80px] shadow-[0px_2px_13px_3px_rgba(255,_184,_79,_0.5)] bg-[#FFB84F] rounded-lg"
+              >
+                <div class="">
+                  <img src="../assets/images/8.svg" alt="" />
+                </div>
+                <span class="font-bold">Head Tube</span>
+              </div>
+              <div class="absolute top-[320px] left-[60px]">
+                <img src="../assets/images/line2.svg" alt="" />
+              </div>
+            </div>
+
+            <button
+              data-target="#frontderlr-btn-toggle"
+              class="parts-tglr h-6 w-6 absolute top-[300px] left-[330px] border-[5px] border-[#FFB84F] bg-[#945900] rounded-full"
+            ></button>
+          </div>
+
+          <!-- image -->
+          <div class="w-10/12 absolute top-10 left-10 z-0">
+            <img src="../assets/images/7.svg" alt="" />
+          </div>
+        </div>
+        <!-- Mountain bike card -->
+        <div
+          id="mountain-bike"
+          class="hidden w-3/5 h-[465px] bg-[url(../assets/images/0.svg)] relative"
+        >
+          <!-- image -->
+          <div class="w-10/12 absolute top-10 left-10">
+            <img src="../assets/images/1.svg" alt="" />
+          </div>
+        </div>
+        <!-- Cargo bike card -->
+        <div
+          id="cargo-bike"
+          class="hidden w-3/5 h-[465px] bg-[url(../assets/images/0.svg)] relative"
+        >
+          <!-- image -->
+          <div class="w-10/12 absolute top-10 left-10">
+            <img src="../assets/images/7.svg" alt="" />
+          </div>
+        </div>
+        <!-- Folding bike card -->
+        <div
+          id="folding-bike"
+          class="hidden w-3/5 h-[465px] bg-[url(../assets/images/0.svg)] relative"
+        >
+          <!-- image -->
+          <div class="w-10/12 absolute top-10 left-10">
+            <img src="../assets/images/1.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container mx-auto h-[575px] text-center flex flex-col space-y-16"
+    >
+      <!-- info -->
+      <div class="w-1/2 mx-auto flex flex-col space-y-4">
+        <span class="text-xl font-medium text-[#FFB84F]">How It Works</span>
+        <p class="text-4xl font-medium">Making Products Work For You</p>
+      </div>
+      <!-- cards -->
+      <div class="flex flex-row justify-between">
+        <!-- card -->
+        <div class="h-[342px] w-[330px] bg-[#FFF7EB] rounded-2xl relative">
+          <!-- bg image -->
+          <img
+            class="absolute z-10 right-0 top-8"
+            src="../assets/images/3.svg"
+            alt=""
+          />
+          <!-- info -->
+          <div
+            class="ml-4 h-full px-4 absolute z-20 flex flex-col text-start space-y-16 justify-center"
+          >
+            <div class="flex flex-col space-y-8">
+              <span class="font-bold text-3xl">Sign Up</span>
+              <p class="text-[#9F9F9F]">
+                sign up to start ride your bike and enjoy
+              </p>
+            </div>
+            <span class="text-[#EBAF56] text-6xl font-bold">01</span>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="h-[342px] w-[330px] bg-[#FFF7EB] rounded-2xl relative">
+          <!-- bg image -->
+          <img
+            class="absolute z-10 right-0 top-8"
+            src="../assets/images/3.svg"
+            alt=""
+          />
+          <!-- info -->
+          <div
+            class="ml-4 h-full px-4 absolute z-20 flex flex-col text-start space-y-16 justify-center"
+          >
+            <div class="flex flex-col space-y-8">
+              <span class="font-bold text-3xl">Setup Instructions</span>
+              <p class="text-[#9F9F9F]">
+                setup instructions to start ride your bike and enjoy
+              </p>
+            </div>
+            <span class="text-[#EBAF56] text-6xl font-bold">02</span>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="h-[342px] w-[330px] bg-[#FFF7EB] rounded-2xl relative">
+          <!-- bg image -->
+          <img
+            class="absolute z-10 right-0 top-8"
+            src="../assets/images/3.svg"
+            alt=""
+          />
+          <!-- info -->
+          <div
+            class="ml-4 h-full px-4 absolute z-20 flex flex-col text-start space-y-16 justify-center"
+          >
+            <div class="flex flex-col space-y-8">
+              <span class="font-bold text-3xl">choose your plan</span>
+              <p class="text-[#9F9F9F]">
+                setup instructions to start ride your bike and enjoy and choose
+                your plan
+              </p>
+            </div>
+            <span class="text-[#EBAF56] text-6xl font-bold">03</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="h-[308px] bg-[#FFB84F]">
+      <div class="container mx-auto w-full h-full relative">
+        <!-- bg logo -->
+        <div class="flex flex-row w-full h-full">
+          <img class="absolute" src="../assets/images/9.svg" alt="" />
+          <img class="absolute right-0" src="../assets/images/9.svg" alt="" />
+          <img
+            class="absolute left-[31.5%] bottom-0"
+            src="../assets/images/10.svg"
+            alt=""
+          />
+          <!-- footer content -->
+          <div class="py-10 flex flex-col justify-between w-full">
+            <div class="w-full flex flex-row justify-between z-10">
+              <!-- logo -->
+              <div>
+                <img src="../assets/images/logo1.svg" alt="" />
+              </div>
+              <!-- icon -->
+              <div class="w-14">
+                <img src="../assets/images/profileImg.svg" alt="" />
+              </div>
+            </div>
+            <!-- links -->
+            <div class="z-10 w-fit flex flex-row space-x-4 items-end ml-auto">
+              <a href="#"
+                ><div>
+                  <img src="../assets/images/behance.svg" alt="" /></div
+              ></a>
+              <a href="#"
+                ><div>
+                  <img src="../assets/images/facebook.svg" alt="" /></div
+              ></a>
+              <a href="#"
+                ><div>
+                  <img src="../assets/images/google.svg" alt="" /></div
+              ></a>
+              <a href="#"
+                ><div>
+                  <img src="../assets/images/linkedin.svg" alt="" /></div
+              ></a>
+              <a href="#"
+                ><div>
+                  <img src="../assets/images/twitter.svg" alt="" /></div
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
